@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kamikat/bilibili-playurl/issues"
   },
-  "homepage": "https://github.com/kamikat/bilibili-playurl#readme"
+  "homepage": "https://github.com/kamikat/bilibili-playurl#readme",
+  "dependencies": {
+    "qs": "^6.5.1"
+  }
 }
