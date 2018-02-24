@@ -1,7 +1,10 @@
 var qs = require('qs');
 var c = require('./vm-159')
   , I = c.cwrap("r", null, "string number number number string string number".split(" "))
-  , g = c.cwrap("s", null, ["number"]);
+  , g = c.cwrap("s", null, ["number"])
+  , P = []
+  , B = c.XB.addFunction(function (b, e) { P.shift().call(null, c.TB(b)) });
+g(B);
 module.exports = function (cid, options) {
   if ('number' == typeof options) {
     options = {
@@ -16,10 +19,7 @@ module.exports = function (cid, options) {
   delete options.season_type;
   delete options.quality;
   return new Promise(function (resolve, reject) {
-    g(c.XB.addFunction(function (b, e) {
-      b = c.TB(b);
-      resolve(b);
-    }));
+    P.push(resolve);
     I(domains[+!!season_type], true, cid, quality, "", qs.stringify(Object.assign(options, {
       qn: quality
     }, season_type > 0 && {
