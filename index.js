@@ -1,9 +1,9 @@
 var qs = require('qs');
-var c = require('./vm-159')
+var c = require('./module-7')
   , I = c.cwrap("r", null, "string number number number string string number".split(" "))
   , g = c.cwrap("s", null, ["number"])
   , P = []
-  , B = c.XB.addFunction(function (b, e) { P.shift().call(null, c.TB(b)) });
+  , B = c.FE.addFunction(function (b, d) { P.shift().call(null, c.DE(b)) });
 g(B);
 module.exports = function (cid, options) {
   if ('number' == typeof options) {
