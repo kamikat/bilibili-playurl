@@ -1,9 +1,9 @@
 var qs = require('qs');
-var c = require('./module-7')
+var c = require('./module-173')
   , I = c.cwrap("r", null, "string number number number string string number".split(" "))
   , g = c.cwrap("s", null, ["number"])
   , P = []
-  , B = c.FE.addFunction(function (b, d) { P.shift().call(null, c.DE(b)) });
+  , B = c.mD.addFunction(function (b, d) { P.shift().call(null, c.iD(b)) });
 g(B);
 module.exports = function (cid, options) {
   if ('number' == typeof options) {
