@@ -14,6 +14,10 @@ resolveCid(32515942).then(function (url) {
 resolveCid(32135110, { season_type: 1, quality: 80 }).then(function (url) {
   console.log(url);
 });
+
+resolveCid(85467263, { useDash: true }).then(function (url) {
+  console.log(url);
+});
 ```
 
 ## License
